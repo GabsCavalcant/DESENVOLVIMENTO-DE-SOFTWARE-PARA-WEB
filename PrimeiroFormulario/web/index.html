@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PrimeiroFormulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Estilo simples para melhorar a legibilidade */
+            body { font-family: sans-serif; line-height: 1.6; }
+            label { display: inline-block; width: 150px; text-align: right; margin-right: 10px; }
+            input, select, textarea { margin-bottom: 10px; }
+            fieldset { margin-bottom: 20px; border: 1px solid #ccc; }
+            legend { font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Cadastro de Cliente</h1>
+
+        <form action="processaDadosCliente" method="POST">
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label>Nome:</label>
+                <input type="text" size="20" name="nome"/>
+                <br/>
+
+                <label>Sobrenome:</label>
+                <input type="text" size="20" name="sobrenome"/>
+                <br/>
+                
+                <label>Email:</label>
+                <input type="email" size="30" name="email" placeholder="seuemail@exemplo.com"/>
+                <br/>
+
+                <label>CPF:</label>
+                <input type="text" size="15" name="cpf" maxlength="14"/>
+                <br/>
+
+                <label>Data de Nascimento:</label>
+                <input type="text" size="10" name="dataNasc" placeholder="dd/mm/aaaa"/>
+                <br/>
+
+                <label>Sexo:</label>
+                <input type="radio" name="sexo" value="M"/> Masculino
+                <input type="radio" name="sexo" value="F"/> Feminino
+                <br/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+                
+                <label>CEP:</label>
+                <input type="text" size="10" name="cep" maxlength="9" placeholder="12345-678"/>
+                <br/>
+                
+                <label>Logradouro:</label>
+                <input type="text" size="40" name="logradouro"/>
+                <br/>
+                
+                <label>Número:</label>
+                <input type="number" size="5" name="numero"/>
+                <br/>
+                
+                <label>Complemento:</label>
+                <input type="text" size="20" name="complemento" placeholder="Apto, Bloco, etc."/>
+                <br/>
+                
+                <label>Cidade:</label>
+                <input type="text" size="30" name="cidade"/>
+                <br/>
+                
+                <label>Estado:</label>
+                <select name="estado">
+                    <option value="">Selecione...</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </select>
+                <br/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Outras Informações</legend>
+                
+                <label>Possui filhos?</label>
+                <input type="checkbox" name="temFilhos" value="sim"/> Sim
+                <br/><br/>
+                
+                <label>Observações:</label>
+                <br/>
+                <textarea cols="40" rows="5" name="observacoes"></textarea>
+                <br/>
+            </fieldset>
+
+            <input type="submit" value="Enviar Dados"/>
+
+        </form>
+    </body>
+</html>
