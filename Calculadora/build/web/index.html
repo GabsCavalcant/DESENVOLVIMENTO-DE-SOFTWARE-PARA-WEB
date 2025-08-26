@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h1>Calculadora</h1>
+        <form action="CalculadoraProcesso" method="GET">
+            
+           
+            <div> 
+                <label>Numero 1</label>
+                <input type="number" name="n1"> 
+            </div>
+            
+             <div> 
+                 <label>numero 2</label>
+                <input type="number" name="n2"> 
+            </div>
+            
+            <div>
+                
+                <span><input type="radio" id="soma" name="operacao" value="soma" checked> <label for="soma">+</label></span>
+                <span><input type="radio" id="subtracao" name="operacao" value="subtracao"> <label for="subtracao">-</label></span>
+                <span><input type="radio" id="multiplicacao" name="operacao" value="multiplicacao"> <label for="multiplicacao">*</label></span>
+                <span><input type="radio" id="divisao" name="operacao" value="divisao"> <label for="divisao">/</label></span>
+                
+                <button type="submit">Calcular</button>
+                
+            </div>
+            
+            
+            
+            
+        </form>
+            
+    </body>
+</html>
